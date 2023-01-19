@@ -21,7 +21,7 @@ public class Server extends UnicastRemoteObject implements RMIInterface {
                 try {
                 	System.out.println("[+] Trying to bind...");
                         //Below IP:PORT can be changed
-                        Naming.rebind("rmi://127.0.0.1:11099/RMIInterface", new Server());
+                        Naming.rebind("rmi://0.0.0.0:11099/RMIInterface", new Server());
                         System.out.println("[+] Server started. ");
                 } catch (Exception e) {
                         e.printStackTrace();
